@@ -413,6 +413,24 @@ Tab:AddButton({
 
 Tab:AddParagraph("注意:复制的东西不能使用")
 
+Tab:AddButton({
+  Name = "交互无冷却",
+  Callback = function()
+  
+
+for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+	if v:IsA("ProximityPrompt") then
+		v["HoldDuration"] = 0
+	end
+end
+ 
+ 
+game:GetService("ProximityPromptService").PromptButtonHoldBegan:Connect(function(v)
+    v["HoldDuration"] = 0
+end)
+  end
+})
+
 local Tab = Window:MakeTab({
 	Name = "最强战场",
 	Icon = "rbxassetid://7734068321",
