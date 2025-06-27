@@ -357,6 +357,13 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
+  Name = "无拉回飞行第二版",
+  Callback = function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/selftilted/flighttosky/refs/heads/main/DeadRails"))()
+  end
+})
+
+Tab:AddButton({
   Name = "近战武器攻速",
   Callback = function()
   loadstring(game:HttpGet("https://raw.githubusercontent.com/HeadHarse/DeadRails/refs/heads/main/V4SWING"))()
