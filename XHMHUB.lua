@@ -443,3 +443,16 @@ Tab:AddButton({
   loadstring(game:HttpGet("https://raw.githubusercontent.com/IdkRandomUsernameok/PublicAssets/refs/heads/main/Releases/MUI.lua"))()
   end
 })
+
+local Tab = Window:MakeTab({
+	Name = "AUT",
+	Icon = "rbxassetid://7734068321",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+  Name = "sannin",
+  Callback = function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/sannin9000/scripts/main/aut.lua"))()
+  end
+})
