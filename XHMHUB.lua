@@ -239,8 +239,28 @@ game.Players.LocalPlayer.Character.Head:Remove()
 })
 
 local Tab = Window:MakeTab({
-	Name = "通用",
+	Name = "死铁轨",
 	Icon = "rbxassetid://7734068321",
 	PremiumOnly = false
 })
 
+Tab:AddButton({
+  Name = "红叶脚本",
+  Callback = function()
+  loadstring(game:HttpGet("https://getnative.cc/script/loader"))()
+  end
+})
+
+Tab:AddButton({
+  Name = "刷债券(最好用)",
+  Callback = function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Anoonymouss69/ScriptHUB/refs/heads/main/AutoBonds"))()
+  end
+})
+
+Tab:AddButton({
+  Name = "刷债券(中文)",
+  Callback = function()
+  loadstring(request({Url="https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/自动债券Linninew.lua"}).Body)()
+  end
+})
