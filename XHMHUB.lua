@@ -17,7 +17,7 @@ print("反挂机开启")
 		   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 		end)
 local OrionLib = loadstring(game:HttpGet('https://pastebin.com/raw/iXGNieAz'))()
-local Window = OrionLib:MakeWindow({Name ="黄某脚本测试版0.01", HidePremium = false, SaveConfig = true,IntroText = "黄某脚本测试版0.01开启", ConfigFolder = "黄某脚本测试版0.01"})
+local Window = OrionLib:MakeWindow({Name ="黄某脚本测试版0.01", HidePremium = false, SaveConfig = true,IntroText = "黄某脚本测试版0.01", ConfigFolder = "黄某脚本测试版0.01"})
 
 local Tab = Window:MakeTab({
     Name = "无",
@@ -244,6 +244,8 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
+Tab:AddParagraph("债券区")
+
 Tab:AddButton({
   Name = "红叶脚本",
   Callback = function()
@@ -266,6 +268,15 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
+  Name = "刷债券(speed hub)",
+  Callback = function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+  end
+})
+
+Tab:AddParagraph("功能区")
+
+Tab:AddButton({
   Name = "无拉回飞行",
   Callback = function()
   loadstring(game:HttpGet("https://rawscripts.net/raw/Dead-Rails-Alpha-FLY-in-Dead-Rails-One-Click-Script-KEYLESS-by-Moondiety-39179"))()
@@ -273,8 +284,9 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-  Name = "刷债券(未知)",
+  Name = "近战武器攻速",
   Callback = function()
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/HeadHarse/DeadRails/refs/heads/main/V4SWING"))()
   end
 })
+
