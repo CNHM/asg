@@ -1,11 +1,11 @@
 loadstring(game:HttpGet("https://pastebin.com/raw/9fFu43FF"))()
 
-game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "纯缝合"; Text ="纯缝合"; Duration = 4; })
+game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "纯缝合"; Text ="..."; Duration = 4; })
 
 local CoreGui = game:GetService("StarterGui")
 
 CoreGui:SetCore("SendNotification", {
-    Title = "黄某脚本测试版0.01",
+    Title = "黄某脚本测试版",
     Text = "正在加载（反挂机已开启）",
     Duration = 5, 
 })
@@ -17,15 +17,15 @@ print("反挂机开启")
 		   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 		end)
 local OrionLib = loadstring(game:HttpGet('https://pastebin.com/raw/iXGNieAz'))()
-local Window = OrionLib:MakeWindow({Name ="黄某脚本测试版0.01", HidePremium = false, SaveConfig = true,IntroText = "黄某脚本测试版0.01", ConfigFolder = "黄某脚本测试版0.01"})
+local Window = OrionLib:MakeWindow({Name ="黄某脚本测试版", HidePremium = false, SaveConfig = true,IntroText = "黄某脚本测试版", ConfigFolder = "黄某脚本测试版"})
 
 local Tab = Window:MakeTab({
-    Name = "无",
+    Name = "信息",
     Icon = "rbxassetid://7734068321",
     PremiumOnly = false
 })
 
-Tab:AddParagraph("黄某脚本测试版0.01")
+Tab:AddParagraph("黄某脚本测试版")
 Tab:AddParagraph("阿尔宙斯注入器可能用不了")
 Tab:AddParagraph("作者roblox id:CNHM88")
 Tab:AddParagraph("作者QQ391108721")
@@ -320,4 +320,15 @@ Tab:AddButton({
   loadstring(game:HttpGet("https://raw.githubusercontent.com/wehjf/Pestilenceringta.github.io/refs/heads/main/horseringta.lua"))()
   end
 })
+
+Tab:AddParagraph("娱乐类")
+
+Tab:AddButton({
+  Name = "Zusume hub",
+  Callback = function()
+  loadstring(game:HttpGet("https://pastebin.com/raw/9fFu43FF"))()
+  end
+})
+
+Tab:AddParagraph("注意:复制的东西不能使用")
 
