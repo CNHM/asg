@@ -371,19 +371,27 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
+  Name = "hub好用的",
+  Callback = function()
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/m00ndiety/Dead-rails/refs/heads/main/Full-GUI'))()
+  end
+})
+
+Tab:AddButton({
   Name = "无限制焊接",
   Callback = function()
   loadstring(game:HttpGet('https://raw.githubusercontent.com/hbjrev/airweld.github.io/refs/heads/main/RINGTA.lua'))()
   end
 })
 
+Tab:AddParagraph("卡密:ringta")
+
 Tab:AddButton({
-  Name = "hub好用的",
+  Name = "铁拳(可以击飞狼人)",
   Callback = function()
-  loadstring(game:HttpGet('https://raw.githubusercontent.com/m00ndiety/Dead-rails/refs/heads/main/Full-GUI'))()
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/0Ben1/fe/main/obf_rf6iQURzu1fqrytcnLBAvW34C9N55kS9g9G3CKz086rC47M6632sEd4ZZYB0AYgV.lua.txt'))()
   end
 })
-Tab:AddParagraph("卡密:ringta")
 
 Tab:AddParagraph("任务类")
 
