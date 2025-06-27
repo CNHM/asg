@@ -238,6 +238,18 @@ game.Players.LocalPlayer.Character.Head:Remove()
   end
 })
 
+Tab:AddToggle({
+	Name = "夜视",
+	Default = false,
+	Callback = function(Value)
+		if Value then
+		    game.Lighting.Ambient = Color3.new(1, 1, 1)
+		else
+		    game.Lighting.Ambient = Color3.new(0, 0, 0)
+		end
+	end
+})
+
 local Tab = Window:MakeTab({
 	Name = "死铁轨",
 	Icon = "rbxassetid://7734068321",
