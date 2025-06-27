@@ -298,6 +298,13 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
+  Name = "传送任何建筑物",
+  Callback = function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/HeadHarse/Dusty/refs/heads/main/Protected_6376837736278867.txt"))()
+  end
+})
+
+Tab:AddButton({
   Name = "无限制焊接",
   Callback = function()
   loadstring(game:HttpGet('https://raw.githubusercontent.com/hbjrev/airweld.github.io/refs/heads/main/RINGTA.lua'))()
