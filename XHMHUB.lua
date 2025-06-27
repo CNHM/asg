@@ -291,6 +291,13 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
+  Name = "近战武器攻速(第二类)",
+  Callback = function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/HeadHarse/Dusty/refs/heads/main/NOTV4TRUST"))()
+  end
+})
+
+Tab:AddButton({
   Name = "无限制焊接",
   Callback = function()
   loadstring(game:HttpGet('https://raw.githubusercontent.com/hbjrev/airweld.github.io/refs/heads/main/RINGTA.lua'))()
