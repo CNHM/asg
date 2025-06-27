@@ -290,6 +290,15 @@ Tab:AddButton({
   end
 })
 
+Tab:AddButton({
+  Name = "无限制焊接",
+  Callback = function()
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/hbjrev/airweld.github.io/refs/heads/main/RINGTA.lua'))()
+  end
+})
+
+Tab:AddParagraph("卡密:ringta")
+
 Tab:AddParagraph("任务类")
 
 Tab:AddButton({
