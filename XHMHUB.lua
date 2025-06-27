@@ -320,6 +320,13 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
+  Name = "自动胜利",
+  Callback = function()
+  loadstring(game:HttpGet("https://rawscripts.net/raw/Dead-Rails-Alpha-Auto-Win-Script-for-Dead-Rails-Instant-win-AFK-farm-KEYLESS-39867"))()
+  end
+})
+
+Tab:AddButton({
   Name = "刷债券(最好用)",
   Callback = function()
   loadstring(game:HttpGet("https://raw.githubusercontent.com/Anoonymouss69/ScriptHUB/refs/heads/main/AutoBonds"))()
