@@ -332,3 +332,11 @@ Tab:AddButton({
 
 Tab:AddParagraph("注意:复制的东西不能使用")
 
+Tab:AddParagraph("任务类")
+
+Tab:AddButton({
+  Name = "僵尸马",
+  Callback = function()
+  loadstring(game:HttpGet("https://raw.github
+  end
+})
