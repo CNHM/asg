@@ -326,7 +326,7 @@ Tab:AddParagraph("娱乐类")
 Tab:AddButton({
   Name = "Zusume hub",
   Callback = function()
-  loadstring(game:HttpGet("https://pastebin.com/raw/9fFu43FF"))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/ZusumeHub/ZusumeHub/refs/heads/main/V3%20deadrails"))()
   end
 })
 
