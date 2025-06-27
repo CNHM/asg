@@ -297,6 +297,12 @@ Tab:AddButton({
   end
 })
 
+Tab:AddButton({
+  Name = "hub好用的",
+  Callback = function()
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/m00ndiety/Dead-rails/refs/heads/main/Full-GUI'))()
+  end
+})
 Tab:AddParagraph("卡密:ringta")
 
 Tab:AddParagraph("任务类")
