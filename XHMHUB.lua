@@ -271,3 +271,10 @@ Tab:AddButton({
   loadstring(game:HttpGet("https://rawscripts.net/raw/Dead-Rails-Alpha-FLY-in-Dead-Rails-One-Click-Script-KEYLESS-by-Moondiety-39179"))()
   end
 })
+
+Tab:AddButton({
+  Name = "刷债券(未知)",
+  Callback = function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+  end
+})
