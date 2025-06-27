@@ -345,3 +345,16 @@ Tab:AddButton({
 })
 
 Tab:AddParagraph("注意:复制的东西不能使用")
+
+local Tab = Window:MakeTab({
+	Name = "最强战场",
+	Icon = "rbxassetid://7734068321",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+  Name = "Fe美化防御",
+  Callback = function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/IdkRandomUsernameok/PublicAssets/refs/heads/main/Releases/MUI.lua"))()
+  end
+})
