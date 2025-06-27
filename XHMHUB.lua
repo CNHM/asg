@@ -30,6 +30,8 @@ Tab:AddParagraph("阿尔宙斯注入器可能用不了")
 Tab:AddParagraph("作者roblox id:CNHM88")
 Tab:AddParagraph("作者QQ391108721")
 Tab:AddParagraph("Q群1043327536")
+Tab:AddParagraph("如果你是买来的那就说明你被圈了")
+Tab:AddParagraph("倒卖者死全家并且螺旋飞天")
 
 local Tab = Window:MakeTab({
 	Name = "设置",
