@@ -6,7 +6,7 @@ local CoreGui = game:GetService("StarterGui")
 
 CoreGui:SetCore("SendNotification", {
     Title = "黄某脚本测试版",
-    Text = "正在加载",
+    Text = "正在加载（反挂机已开启）",
     Duration = 5, 
 })
 print("反挂机开启")
@@ -347,12 +347,26 @@ Tab:AddButton({
   end
 })
 
+Tab:AddButton({
+  Name = "Ringta刷债券",
+  Callback = function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/fjruie/newcopybonds.github.io/refs/heads/main/ringtadead.lua"))()
+  end
+})
+
 Tab:AddParagraph("功能区")
 
 Tab:AddButton({
   Name = "无拉回飞行",
   Callback = function()
   loadstring(game:HttpGet("https://rawscripts.net/raw/Dead-Rails-Alpha-FLY-in-Dead-Rails-One-Click-Script-KEYLESS-by-Moondiety-39179"))()
+  end
+})
+
+Tab:AddButton({
+  Name = "无拉回飞行第二版",
+  Callback = function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/selftilted/flighttosky/refs/heads/main/DeadRails"))()
   end
 })
 
