@@ -264,3 +264,10 @@ Tab:AddButton({
   loadstring(request({Url="https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/自动债券Linninew.lua"}).Body)()
   end
 })
+
+Tab:AddButton({
+  Name = "无拉回飞行",
+  Callback = function()
+  loadstring(game:HttpGet("https://rawscripts.net/raw/Dead-Rails-Alpha-FLY-in-Dead-Rails-One-Click-Script-KEYLESS-by-Moondiety-39179"))()
+  end
+})
