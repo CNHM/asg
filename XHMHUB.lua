@@ -290,3 +290,12 @@ Tab:AddButton({
   end
 })
 
+Tab:AddParagraph("任务类")
+
+Tab:AddButton({
+  Name = "僵尸马",
+  Callback = function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/wehjf/Pestilenceringta.github.io/refs/heads/main/horseringta.lua"))()
+  end
+})
+
