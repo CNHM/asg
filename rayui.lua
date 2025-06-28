@@ -38,11 +38,17 @@ local Window = Rayfield:CreateWindow({
 local Tab = Window:CreateTab("信息", 4483362458)
 
 local Section = Tab:CreateSection("黄某脚本中心")
+
 local Divider = Tab:CreateDivider()
+
 local Section = Tab:CreateSection("阿尔宙斯注入器可能用不了")
+
 local Section = Tab:CreateSection("作者游戏名CNHM88")
+
 local Section = Tab:CreateSection("交流QQ群1043327536")
+
 local Section = Tab:CreateSection("禁止倒卖")
+
 local Section = Tab:CreateSection("倒卖死全家")
 
 local Tab = Window:CreateTab("设置", 4483362458)
