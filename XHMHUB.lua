@@ -1,9 +1,3 @@
-whitelist = {
-"名字",
-"名字",
-"CNHM88"
-}
-if table.find(whitelist, game.Players.LocalPlayer.Name) then
 loadstring(game:HttpGet("https://pastebin.com/raw/9fFu43FF"))()
 
 game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "纯缝合"; Text ="..."; Duration = 4; })
@@ -482,5 +476,3 @@ Tab:AddButton({
   loadstring(game:HttpGet("https://raw.githubusercontent.com/sannin9000/scripts/main/aut.lua"))()
   end
 })
-else	
-end
