@@ -438,6 +438,12 @@ for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
 	end
 end
  
+Tab:AddButton({
+  Name = "蜘蛛侠HUB",
+  Callback = function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/SpiderScriptRB/Dead-Rails-SpiderXHub-Script/refs/heads/main/SpiderXHub%202.0.txt"))()
+  end
+})
  
 game:GetService("ProximityPromptService").PromptButtonHoldBegan:Connect(function(v)
     v["HoldDuration"] = 0
