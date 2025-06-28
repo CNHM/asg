@@ -36,7 +36,7 @@ local Window = Rayfield:CreateWindow({
 })
 
 local Tab = Window:CreateTab("信息", 4483362458)
-
+local Divider = Tab:CreateDivider()
 local Section = Tab:CreateSection("黄某脚本中心")
 local Section = Tab:CreateSection("阿尔宙斯注入器可能用不了")
 local Section = Tab:CreateSection("作者游戏名CNHM88")
@@ -44,4 +44,20 @@ local Section = Tab:CreateSection("交流QQ群1043327536")
 local Section = Tab:CreateSection("禁止倒卖")
 local Section = Tab:CreateSection("倒卖死全家")
 
-local Tab = Window:CreateTab("设置", 4483362458)
+local Tab = Window:CreateTab("死铁轨", 4483362458)
+
+local Section = Tab:CreateSection("债券区")
+
+local Button = Tab:CreateButton({
+   Name = "红叶脚本",
+   Callback = function()
+   loadstring(game:HttpGet("https://getnative.cc/script/loader"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "自动胜利",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Dead-Rails-Alpha-Auto-Win-Script-for-Dead-Rails-Instant-win-AFK-farm-KEYLESS-39867"))()
+   end,
+})
