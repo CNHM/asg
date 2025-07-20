@@ -7239,7 +7239,7 @@ g(p.UIElements.Main,0.35,{Position=UDim2.new(0.5,0,0.5,0)},Enum.EasingStyle.Quin
 p:Dialog{
 
 Title="注意",
-Content="你是否要关闭此脚本？你将无法再次打开脚本!",
+Content="你是否要关闭此脚本？你将无法打开脚本!",
 Buttons={
 {
 Title="取消",
@@ -7248,7 +7248,7 @@ Callback=function()end,
 Variant="Secondary",
 },
 {
-Title="关闭脚本",
+Title="关闭",
 
 Callback=function()p:Close():Destroy()end,
 Variant="Primary",
