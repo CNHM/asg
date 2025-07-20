@@ -113,7 +113,7 @@ if not i then local
 k, l=j:find":%d+: "
 
 
-warn("[ WindUI: DEBUG Mode ] "..j)
+warn("[ WindUI: 调试模式 ] "..j)
 
 return g.WindUI:Notify{
 Title="错误",
@@ -7402,8 +7402,8 @@ o:CreateTopbarButton("Close","x",function()
 e(o.UIElements.Main,0.35,{Position=UDim2.new(0.5,0,0.5,0)},Enum.EasingStyle.Quint,Enum.EasingDirection.Out):Play()
 o:Dialog{
 
-Title="Close Window",
-Content="Do you want to close this window? You will not be able to open it again.",
+Title="注意",
+Content="你确定要关闭此脚本? 你将无法再次打开脚本!",
 Buttons={
 {
 Title="Cancel",
