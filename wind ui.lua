@@ -6772,7 +6772,7 @@ x.Visible=true
 end
 end)
 
-local K=w and"点击 "..p.ToggleKey.Name.." 打开脚本"or"点击按钮打开脚本"
+local K=w and"点击 "..p.ToggleKey.Name.." 打开脚本"or"点击按钮重新打开脚本"
 
 if not p.IsOpenButtonEnabled then
 n=true
@@ -6782,7 +6782,7 @@ n=not n
 o.WindUI:Notify{
 Title="提示",
 Content="你已关闭窗口 "..K,
-Icon="关闭",
+Icon="circle-alert",
 Duration=5,
 }
 end
