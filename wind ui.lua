@@ -116,7 +116,7 @@ k, l=j:find":%d+: "
 warn("[ WindUI: 调试模式 ] "..j)
 
 return g.WindUI:Notify{
-Title="调试模式: 错误",
+Title="错误",
 Content=not l and j or j:sub(l+1),
 Duration=8,
 }
@@ -5457,7 +5457,7 @@ Icons=a.load'C'
 
 local j=ac("TextBox",{
 Text="",
-PlaceholderText="Search...",
+PlaceholderText="搜索",
 ThemeTag={
 PlaceholderColor3="Placeholder",
 TextColor3="Text",
