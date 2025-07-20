@@ -4288,7 +4288,7 @@ Parent=M,
 Scale=.85,
 })
 
-M.Frame.Frame.TextBox.Text=L
+M.Frame.Frame.TextBox.=L
 M.Size=UDim2.new(0,150,0,42)
 
 return M
@@ -5185,7 +5185,7 @@ ImageTransparency=.6,
 }),
 ac("TextLabel",{
 AutomaticSize="XY",
-Text="This tab is empty",
+Text="空空如也",
 ThemeTag={
 TextColor3="Text"
 },
@@ -5860,7 +5860,7 @@ elseif r~=""then
 ac("TextLabel",{
 Size=UDim2.new(1,0,0,70),
 BackgroundTransparency=1,
-Text="No results found",
+Text="无结果",
 TextSize=16,
 ThemeTag={
 TextColor3="Text",
