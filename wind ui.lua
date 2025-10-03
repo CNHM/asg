@@ -1,3 +1,4 @@
+--UI最新翻译-1.6.53版本
 local a a={cache={}, load=function(b)if not a.cache[b]then a.cache[b]={c=a[b]()}end return a.cache[b].c end}do function a.a()local b=game:GetService"RunService"local d=
 b.Heartbeat
 local e=game:GetService"UserInputService"
