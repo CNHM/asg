@@ -1,3 +1,4 @@
+--此中文版Wind UI由屑黄某独自翻译
 local a a={cache={}, load=function(b)if not a.cache[b]then a.cache[b]={c=a[b]()}end return a.cache[b].c end}do function a.a()local b=(cloneref or clonereference or function(b)return b end)
 
 local d=b(game:GetService"ReplicatedStorage":WaitForChild("GetIcons",99999):InvokeServer())
@@ -16,7 +17,7 @@ end
 
 function d.AddIcons(e,f)
 if type(e)~="string"or type(f)~="table"then
-error"AddIcons: packName must be string, iconsData must be table"
+error"AddIcons：packName 必须是字符串，iconsData 必须是表格"
 return
 end
 
@@ -60,10 +61,10 @@ if not d.Icons[e].Spritesheets[i]then
 d.Icons[e].Spritesheets[i]=i
 end
 else
-warn("AddIcons: Invalid spritesheet data format for icon '"..g.."'")
+warn("AddIcons：图标的 spritesheet 数据格式无效 '"..g.."'")
 end
 else
-warn("AddIcons: Unsupported data type for icon '"..g.."': "..type(h))
+warn("AddIcons：图标不支持的数据类型 '"..g.."': "..type(h))
 end
 end
 end
@@ -538,7 +539,7 @@ return z.Time<A.Time
 end)
 
 if#v<2 then
-error"ColorSequence requires at least 2 keypoints"
+error"ColorSequence 至少需要 2 个检查点"
 end
 
 local z={
@@ -1116,7 +1117,7 @@ H.ImageLabel.Image=N
 else
 warn(
 string.format(
-"[ WindUI.Creator ] Failed to load custom asset '%s': %s",
+"[WindUI.Creator] 加载自定义资源失败 '%s': %s",
 J,
 tostring(N)
 )
@@ -1130,7 +1131,7 @@ end)
 if not L then
 warn(
 "[ WindUI.Creator ]  '"..identifyexecutor()
-or"Studio".."' doesnt support the URL Images. Error: "..M
+or"Studio".."' 不支持 URL 图片 错误: "..M
 )
 
 H:Destroy()
@@ -1658,12 +1659,12 @@ ae(au.message);
 return false,au.message
 end
 elseif at.StatusCode==429 then
-local au="you are being rate limited, please wait 20 seconds and try again.";
+local au="您目前受到速率限制，请稍等 20 秒后重试";
 ae(au);
 return false,au
 end
 
-local au="Failed to cache link.";
+local au="链接缓存失败";
 ae(au);
 return false,au
 else
@@ -1734,19 +1735,19 @@ if ad then
 if aA.data.hash==W("true".."-"..aw.."-"..ac)then
 return true
 else
-ae"failed to verify integrity.";
+ae"未能验证完整性";
 return false
 end
 else
 return true
 end
 else
-ae"key is invalid.";
+ae"卡密无效";
 return false
 end
 else
 if ak(aA.message,1,27)=="unique constraint violation"then
-ae"you already have an active key, please wait for it to expire before redeeming it.";
+ae"您已拥有有效卡密，请等待其过期后再进行兑换使用";
 return false
 else
 ae(aA.message);
@@ -1754,10 +1755,10 @@ return false
 end
 end
 elseif az.StatusCode==429 then
-ae"you are being rate limited, please wait 20 seconds and try again.";
+ae"您目前受到速率限制，请等待 20 秒后再试";
 return false
 else
-ae"server returned an invalid status code, please try again later.";
+ae"服务器返回了无效的状态码，请稍后再试";
 return false
 end
 end
@@ -1765,7 +1766,7 @@ end
 
 local aw=function(aw)
 if af==true then
-return false,("A request is already being sent, please slow down.")
+return false,("请求正在发送中，请稍等片刻…")
 else
 af=true;
 end
@@ -1793,7 +1794,7 @@ if ad then
 if aA.data.hash==W("true".."-"..ax.."-"..ac)then
 return true,""
 else
-return false,("failed to verify integrity.")
+return false,("未能验证完整性")
 end
 else
 return true
@@ -1802,16 +1803,16 @@ else
 if ak(aw,1,4)=="KEY_"then
 return true,av(aw)
 else
-return false,("Key is invalid.")
+return false,("密钥无效")
 end
 end
 else
 return false,(aA.message)
 end
 elseif az.StatusCode==429 then
-return false,("You are being rate limited, please wait 20 seconds and try again.")
+return false,("您目前受到速率限制，请等待 20 秒后再试")
 else
-return false,("Server returned an invalid status code, please try again later.")
+return false,("服务器返回了无效的状态码，请稍后再试")
 end
 end
 
@@ -1837,7 +1838,7 @@ if ad then
 if aB.data.hash==W(aj(aB.data.value).."-"..ay.."-"..ac)then
 return aB.data.value
 else
-ae"failed to verify integrity.";
+ae"未能验证完整性";
 return nil
 end
 else
@@ -1913,23 +1914,23 @@ if an and ao then
 if ao.Authenticated_Status and ao.Authenticated_Status=="Success"then
 return true,"Authenticated"
 else
-local ap=ao.Note or"Unknown reason"
-return false,"Authentication failed: "..ap
+local ap=ao.Note or"原因不明"
+return false,"身份验证失败： "..ap
 end
 else
-return false,"JSON decode error"
+return false,"JSON 解码错误"
 end
 else
 warn(
-" HTTP request was not successful. Code: "
+" HTTP 请求失败，错误代码： "
 ..tostring(am.StatusCode)
-.." Message: "
+.." 信息: "
 ..am.StatusMessage
 )
-return false,"HTTP request failed: "..am.StatusMessage
+return false,"HTTP 请求失败: "..am.StatusMessage
 end
 else
-return false,"Request pcall error"
+return false,"请求 pcall 错误"
 end
 end
 
@@ -1976,15 +1977,15 @@ local ah=ae.check_key(ag);
 
 
 if(ah.code=="KEY_VALID")then
-return true,"Whitelisted!"
+return true,"已加入白名单！"
 
 elseif(ah.code=="KEY_HWID_LOCKED")then
-return false,"Key linked to a different HWID. Please reset it using our bot"
+return false,"此密钥已关联到其他 HWID，请使用我们的机器人重置卡密"
 
 elseif(ah.code=="KEY_INCORRECT")then
-return false,"Key is wrong or deleted!"
+return false,"卡密错误或已删除！"
 else
-return false,"Key check failed:"..ah.message.." Code: "..ah.code
+return false,"卡密检查失败："..ah.message.." 代码: "..ah.code
 end
 end
 
@@ -2017,33 +2018,33 @@ JunkieProtected.SERVICE_ID=ab
 
 local function ValidateKey(ae)
 if not ae or ae==""then
-print"No key provided!"
+print"未提供卡密!"
 
-return false,"No key provided. Please get a key."
+return false,"没有提供卡密，请去获取卡密"
 end
 
 local af=JunkieProtected.IsKeylessMode()
 if af and af.keyless_mode then
-print"Keyless mode enabled. Starting script..."
-return true,"Keyless mode enabled. Starting script..."
+print"无卡密模式已启用，正在启动脚本……"
+return true,"无钥匙模式已启用，正在启动脚本……"
 end
 
 local ag=JunkieProtected.ValidateKey{Key=ae}
 if ag=="valid"then
-print"Key is valid! Starting script..."
+print"卡密有效！脚本开始运行……"
 load()
 if _G.JD_IsPremium then
-print"Premium user detected!"
+print"检测到高级版脚本用户！"
 else
-print"Standard user"
+print"标准用户"
 end
 
-return true,"Key is valid!"
+return true,"卡密有效！"
 else
 local ah=JunkieProtected.GetKeyLink()
-print"Invalid key!"
+print"卡密无效！"
 
-return false,"Invalid key. Get one from:"..ah
+return false,"卡密无效，请从以下位置获取密钥："..ah
 end
 end
 
@@ -2984,8 +2985,8 @@ end)
 ab.AddSignal(v.MouseButton1Click,function()
 r.Copy()
 ag.WindUI:Notify{
-Title="Key System",
-Content="Key link copied to clipboard.",
+Title="卡密系统",
+Content="卡密链接已复制到剪贴板。",
 Image="key",
 }
 end)
@@ -3040,8 +3041,8 @@ ai(true)
 end
 else
 ag.WindUI:Notify{
-Title="Key System. Error",
-Content="Invalid key.",
+Title="卡密系统错误",
+Content="卡密无效",
 Icon="triangle-alert",
 }
 end
@@ -3073,7 +3074,7 @@ if b then
 handleSuccess(aA)
 else
 ag.WindUI:Notify{
-Title="Key System. Error",
+Title="卡密系统错误",
 Content=d,
 Icon="triangle-alert",
 }
@@ -4562,11 +4563,11 @@ end
 
 function ae.Init(af,ag)
 if not ag.Folder then
-warn"[ WindUI.ConfigManager ] Window.Folder is not specified."
+warn"[ WindUI.ConfigManager ] 未指定窗口配置文件"
 return false
 end
 if ab:IsStudio()or not writefile then
-warn"[ WindUI.ConfigManager ] The config system doesn't work in the studio."
+warn"[ WindUI.ConfigManager ] Roblox Studio 里的配置系统无法正常工作"
 return false
 end
 
@@ -4591,7 +4592,7 @@ end
 
 function ae.SetPath(af,ag)
 if not ag then
-warn"[ WindUI.ConfigManager ] Custom path is not specified."
+warn"[ WindUI.ConfigManager ] 未指定自定义路径"
 return false
 end
 
@@ -4617,7 +4618,7 @@ Version=1.2,
 }
 
 if not ag then
-return false,"No config file is selected"
+return false,"未选择任何配置文件"
 end
 
 function ai.SetAsCurrent(aj)
@@ -4670,19 +4671,19 @@ end
 
 function ai.Load(aj)
 if isfile and not isfile(ai.Path)then
-return false,"Config file does not exist"
+return false,"配置文件不存在
 end
 
 local ak,al=pcall(function()
 local ak=readfile or function()
-warn"[ WindUI.ConfigManager ] The config system doesn't work in the studio."
+warn"[ WindUI.ConfigManager ] Roblox Studio 里的配置系统无法正常工作."
 return nil
 end
 return ac:JSONDecode(ak(ai.Path))
 end)
 
 if not ak then
-return false,"Failed to parse config file"
+return false,"解析配置文件失败"
 end
 
 if not al.__version then
@@ -4715,11 +4716,11 @@ end
 
 function ai.Delete(aj)
 if not delfile then
-return false,"delfile function is not available"
+return false,"delfile 函数不可用"
 end
 
 if not isfile(ai.Path)then
-return false,"Config file does not exist"
+return false,"配置文件不存在"
 end
 
 local ak,al=pcall(function()
@@ -4727,7 +4728,7 @@ delfile(ai.Path)
 end)
 
 if not ak then
-return false,"Failed to delete config file: "..tostring(al)
+return false,"删除配置文件失败： "..tostring(al)
 end
 
 ae.Configs[ag]=nil
@@ -4736,7 +4737,7 @@ if ad.CurrentConfig==ai then
 ad.CurrentConfig=nil
 end
 
-return true,"Config deleted successfully"
+return true,"配置已成功删除"
 end
 
 function ai.GetData(aj)
@@ -4762,9 +4763,9 @@ local al,am=pcall(function()
 return ai:Load()
 end)
 if al then
-if ad.Debug then print("[ WindUI.ConfigManager ] AutoLoaded config: "..ag)end
+if ad.Debug then print("[ WindUI.ConfigManager ] 自动加载配置： "..ag)end
 else
-warn("[ WindUI.ConfigManager ] Failed to AutoLoad config: "..ag.." - "..tostring(am))
+warn("[ WindUI.ConfigManager ] 自动加载配置失败： "..ag.." - "..tostring(am))
 end
 end)
 end
@@ -4794,13 +4795,13 @@ end
 
 function ae.DeleteConfig(af,ag)
 if not delfile then
-return false,"delfile function is not available"
+return false,"delfile 函数不可用"
 end
 
 local ah=ae.Path..ag..".json"
 
 if not isfile(ah)then
-return false,"Config file does not exist"
+return false,"配置文件不存在"
 end
 
 local ai,aj=pcall(function()
@@ -4808,7 +4809,7 @@ delfile(ah)
 end)
 
 if not ai then
-return false,"Failed to delete config file: "..tostring(aj)
+return false,"删除配置文件失败： "..tostring(aj)
 end
 
 ae.Configs[ag]=nil
@@ -4817,7 +4818,7 @@ if ad.CurrentConfig and ad.CurrentConfig.Path==ah then
 ad.CurrentConfig=nil
 end
 
-return true,"Config deleted successfully"
+return true,"配置已成功删除"
 end
 
 function ae.AllConfigs(af)
@@ -6685,7 +6686,7 @@ al,am=ad(ak,ai.Icon,ai.IconSize,ai.ToggleFrame.UIElements.Main,ai.Callback,ah.Wi
 elseif ai.Type=="Checkbox"then
 al,am=ae(ak,ai.Icon,ai.IconSize,ai.ToggleFrame.UIElements.Main,ai.Callback,ah)
 else
-error("Unknown Toggle Type: "..tostring(ai.Type))
+error("未知开关类型： "..tostring(ai.Type))
 end
 
 al.AnchorPoint=Vector2.new(1,ah.Window.NewElements and 0 or 0.5)
@@ -7267,7 +7268,7 @@ Type=ai.Type or"Input",
 Locked=ai.Locked or false,
 LockedTitle=ai.LockedTitle,
 InputIcon=ai.InputIcon or false,
-Placeholder=ai.Placeholder or"Enter Text...",
+Placeholder=ai.Placeholder or"输入文本...",
 Value=ai.Value or"",
 Callback=ai.Callback or function()end,
 ClearTextOnFocus=ai.ClearTextOnFocus or false,
@@ -7636,7 +7637,7 @@ an.Tabs={}
 
 if an.SearchBarEnabled then
 if not as then
-as=ai("Search...","search",an.UIElements.Menu,nil,function(av)
+as=ai("搜索...","搜索",an.UIElements.Menu,nil,function(av)
 for aw,ax in next,an.Tabs do
 if string.find(string.lower(ax.Name),string.lower(av),1,true)then
 ax.UIElements.TabItem.Visible=true
@@ -8590,8 +8591,8 @@ if al.OnCopy then al.OnCopy()end
 end)
 if not ao then
 ak.WindUI:Notify{
-Title="Error",
-Content="The "..an.." is not copied. Error: "..ap,
+Title="错误",
+Content="该 "..an.." 未能成功复制，错误出处: "..ap,
 Icon="x",
 Duration=5,
 }
@@ -10078,7 +10079,7 @@ if aw then
 ah.PendingConfigData[ar.Flag]=nil
 else
 warn(
-"[ WindUI ] Failed to apply pending config for '"
+"[ WindUI ] 应用待处理的配置失败 '"
 ..ar.Flag
 .."': "
 ..tostring(ax)
@@ -10218,7 +10219,7 @@ Locked=an.Locked,
 ShowTabTitle=an.ShowTabTitle,
 TabTitleAlign=an.TabTitleAlign or"Left",
 CustomEmptyPage=(an.CustomEmptyPage and next(an.CustomEmptyPage)~=nil)and an.CustomEmptyPage
-or{Icon="lucide:frown",IconSize=48,Title="This tab is Empty",Desc=nil},
+or{Icon="lucide:frown",IconSize=48,Title="空空如也",Desc=nil},
 Border=an.Border,
 Selected=false,
 Index=nil,
@@ -11020,7 +11021,7 @@ Icons=a.load'_',
 
 local ao=ah("TextBox",{
 Text="",
-PlaceholderText="Search...",
+PlaceholderText="搜索...",
 ThemeTag={
 PlaceholderColor3="Placeholder",
 TextColor3="Text",
@@ -11502,7 +11503,7 @@ end
 elseif au~=""then
 ah("TextLabel",{
 Size=UDim2.new(1,0,0,70),
-Text="No results found",
+Text="未找到/搜索到结果",
 TextSize=16,
 ThemeTag={
 TextColor3="Text",
@@ -12066,7 +12067,7 @@ local m=game.HttpGet and game:HttpGet(h)
 writefile(l,m.Body)
 end)
 if not m then
-warn("[ WindUI.Window.Background ] Failed to download video: "..tostring(p))
+warn("[ WindUI.Window.Background ] 视频下载失败: "..tostring(p))
 return
 end
 end
@@ -12075,10 +12076,10 @@ local m,p=pcall(function()
 return getcustomasset(l)
 end)
 if not m then
-warn("[ WindUI.Window.Background ] Failed to load custom asset: "..tostring(p))
+warn("[ WindUI.Window.Background ] 加载自定义组件失败: "..tostring(p))
 return
 end
-warn"[ WindUI.Window.Background ] VideoFrame may not work with custom video"
+warn"[ WindUI.Window.Background ] VideoFrame 可能无法处理自定义视频"
 h=p
 end
 
@@ -12110,7 +12111,7 @@ local m=game.HttpGet and game:HttpGet(j)
 writefile(l,m.Body)
 end)
 if not m then
-warn("[ Window.Background ] Failed to download image: "..tostring(p))
+warn("[ Window.Background ] 图片下载失败: "..tostring(p))
 return
 end
 end
@@ -12119,7 +12120,7 @@ local m,p=pcall(function()
 return getcustomasset(l)
 end)
 if not m then
-warn("[ Window.Background ] Failed to load custom asset: "..tostring(p))
+warn("[ Window.Background ] 加载自定义资源失败: "..tostring(p))
 return
 end
 
@@ -13395,11 +13396,11 @@ F=true
 
 au:Dialog{
 
-Title="Close Window",
-Content="Do you want to close this window? You will not be able to open it again.",
+Title="关闭脚本 | 提醒",
+Content="您要关闭此脚本吗？您将无法再次打开此脚本😰",
 Buttons={
 {
-Title="Cancel",
+Title="算了",
 
 Callback=function()
 F=false
@@ -13407,7 +13408,7 @@ end,
 Variant="Secondary",
 },
 {
-Title="Close Window",
+Title="坚决关闭",
 
 Callback=function()
 F=false
@@ -13919,7 +13920,7 @@ aw.Window=aa.Window
 aw.Parent=aa.ScreenGui.Window
 
 if aa.Window then
-warn"You cannot create more than one window"
+warn"您不能重复执行多个脚本"
 return
 end
 
