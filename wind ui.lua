@@ -1,4 +1,4 @@
---此中文版Wind UI由屑黄某独自翻译
+--此中文版 Wind UI 库由屑黄某翻译
 local a a={cache={}, load=function(b)if not a.cache[b]then a.cache[b]={c=a[b]()}end return a.cache[b].c end}do function a.a()local b=(cloneref or clonereference or function(b)return b end)
 
 local d=b(game:GetService"ReplicatedStorage":WaitForChild("GetIcons",99999):InvokeServer())
@@ -4671,7 +4671,7 @@ end
 
 function ai.Load(aj)
 if isfile and not isfile(ai.Path)then
-return false,"配置文件不存在
+return false,"配置文件不存在""
 end
 
 local ak,al=pcall(function()
