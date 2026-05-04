@@ -7637,7 +7637,7 @@ an.Tabs={}
 
 if an.SearchBarEnabled then
 if not as then
-as=ai("搜索...","搜索",an.UIElements.Menu,nil,function(av)
+as=ai("搜索...","search",an.UIElements.Menu,nil,function(av)
 for aw,ax in next,an.Tabs do
 if string.find(string.lower(ax.Name),string.lower(av),1,true)then
 ax.UIElements.TabItem.Visible=true
@@ -13570,7 +13570,7 @@ local N=false
 
 
 
-local O=ao("Search","search",au.UIElements.SideBarContainer,true)
+local O=ao("搜索","search",au.UIElements.SideBarContainer,true)
 O.Size=UDim2.new(1,-au.UIPadding/2,0,39)
 O.Position=UDim2.new(0,au.UIPadding/2,0,0)
 
