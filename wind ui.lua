@@ -4671,7 +4671,7 @@ end
 
 function ai.Load(aj)
 if isfile and not isfile(ai.Path)then
-return false,"配置文件不存在"
+return false,"配置文件不存在",
 end
 
 local ak,al=pcall(function()
